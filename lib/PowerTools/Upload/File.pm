@@ -4,6 +4,7 @@ use 5.008008;
 use strict;
 use warnings;
 use Carp;
+use File::Scan::ClamAV;
 
 require Exporter;
 
@@ -26,7 +27,7 @@ our @EXPORT = qw(
 	upload
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 # Below is stub documentation for your module. You'd better edit it!
@@ -121,7 +122,6 @@ sub upload {
 		$self->{'filesize'} = $size;
 
 		if($self->{clamav} == 1) {
-			use File::Scan::ClamAV;
 			my $av = new File::Scan::ClamAV(port => 3310);
 			if($av->ping){
 				my ($code,$virus) = $av->streamscan($var);

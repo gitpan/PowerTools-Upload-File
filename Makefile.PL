@@ -5,8 +5,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'PowerTools::Upload::File',
     VERSION_FROM      => 'lib/PowerTools/Upload/File.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {File::Scan::ClamAV}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/PowerTools/Upload/File.pm', # retrieve abstract from module
-       AUTHOR         => 'A. U. Thor <a.u.thor@a.galaxy.far.far.away>') : ()),
+       AUTHOR         => 'Piotr Ginalski <office@gbshouse.com>') : ()),
 );
