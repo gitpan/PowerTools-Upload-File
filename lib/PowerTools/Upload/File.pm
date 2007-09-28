@@ -27,7 +27,7 @@ our @EXPORT = qw(
 	upload
 );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 # Below is stub documentation for your module. You'd better edit it!
